@@ -2,6 +2,7 @@ package io.github.fhellipevalentin.hrworker.resources;
 
 import io.github.fhellipevalentin.hrworker.entities.Worker;
 import io.github.fhellipevalentin.hrworker.repositories.WorkerRepository;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+@RefreshScope
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerResource {
