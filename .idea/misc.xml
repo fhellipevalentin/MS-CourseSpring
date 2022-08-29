@@ -9,6 +9,7 @@
         <option value="$PROJECT_DIR$/hr-payroll/pom.xml" />
         <option value="$PROJECT_DIR$/hr-worker/pom.xml" />
         <option value="$PROJECT_DIR$/hr-user/pom.xml" />
+        <option value="$PROJECT_DIR$/hr-oauth/pom.xml" />
       </list>
     </option>
   </component>
