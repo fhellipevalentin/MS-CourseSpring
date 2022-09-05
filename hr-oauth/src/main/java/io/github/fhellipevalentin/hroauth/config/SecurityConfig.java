@@ -1,6 +1,5 @@
 package io.github.fhellipevalentin.hroauth.config;
 
-import org.bouncycastle.crypto.generators.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
