@@ -3,6 +3,68 @@ Aprendendo sobre Micro Serviços
 
 Créditos: Nelio Alves - Udemy
 
+# OBJETIVO
+
+Essas sequencias de commits são uma sequencia na qual mostra a desenvoltura de um programa totalmente voltada para a simulação de um
+programa que atua através de micro-serviços. São ao todo: 7 micro-serviços e cada um desempenha a devida função e compõem uma aplicação
+única, e assim o aprendizado mostra explicitamente a vantagem de manutenção e reutilização dos módulos da aplicação como um todo.
+
+Abaixo: Você pode notar a existência dos micro serviços como módulos através da IDE utilizada, que é o IntelliJ.
+
+![image](https://user-images.githubusercontent.com/65087845/191244701-97c6b179-3974-4a6b-b306-53a63ca023f9.png)
+
+A execução do programa é a de como qualquer aplicação de micro serviço, ou seja, para ser executada, é necessário executar os dependentes.
+
+1º:  hr-config-server (Servidor de Configuração, no qual, guarda as variáveis de configuração)
+
+2º:  hr-eureka-server (Servidor de Registros, no qual, será responsável por gerenciar o status e a localização dos micro serviços)
+
+3º:  hr-api-gateway-zull (Serviço que é o Gateway da nossa rede, que fará a responsabilidade de conectar os nossos serviços, utilizando uma
+rede, que por enquanto, se dá pela utilização das portas locais da maquina em que está executando).
+
+4º:  hr-oauth (Servidor de Autenticação, para fins de login da instancias cadastradas)
+
+5º:  hr-user (Serviço que define as regras dos perfis dos usuários, atribuindo os privilégios segundo o nível de usuário registrado)
+
+6º:  hr-worker (Serviço que carrega as intancias que vão manipular os recursos da aplicação, à cada nova instancia gerada - o que podem ser
+multiplas - será devidamente conectada à aplicação mesmo que através de uma porta aleatória)
+
+7º:  hr-payroll (Serviço que manipula uma operação simples de cálculo de horas trabalhadas das instancias de "hr-worker" registradas);
+
+# Funcionamento do programa 
+
+Abaixo, o programa em execução, carregando três instancias de hr-worker (no perfil de teste), e ao mesmo tempo, todos em pleno funcionamento
+rodando em diferentes portas, ao mesmo tempo, conectados localmente.
+
+![image](https://user-images.githubusercontent.com/65087845/191249632-1201c97e-80cd-411d-99e7-ca78122106b4.png)
+
+# Funcionamento da visualização do servidor Eureka
+
+Abaixo, visualmente é possível identificar as instancias registradas no Servidor Eureka, e assim, contectadas através do Gateway Zull
+e também, as três instancias de worker identificadas.
+
+![image](https://user-images.githubusercontent.com/65087845/191251334-822aa10c-78c1-4dac-8015-b52c6fd2eaf6.png)
+
+## Testando Requisições
+
+O programa assim, como está desde o ultimo commit, pode já fazer requisições através de programas como Postman. Com a ordem de primeiramente,
+fazer o login segundo os usuários registrados e seus respectivos perfis.
+
+## Requisição de login em pleno funcionamento
+
+![image](https://user-images.githubusercontent.com/65087845/191251658-38990f4e-2d12-444c-be0a-2e3caa32df73.png)
+
+## Requisição de cálculo de dias trabalhados com valores inseridos diretamente no endpoint
+
+![image](https://user-images.githubusercontent.com/65087845/191253028-24eadb39-dde8-4699-b366-e6567dbcc369.png)
+
+
+# Fases de criação do programa
+
+Graças ao passo a passo abaixo o programa pôde ser realizado com sucesso. De requisito, precisamos de uma versão do Java 11 instalado localmente, 
+das dependências segundo os passos abaixo, inclusive a base de dados para ser lançada no banco de dados de testes H2 para ao menos as requisições 
+serem usadas localmente.
+
 # Fase 1: Comunicação simples, Feign, Ribbon
 
 ### 1.1 Criar projeto hr-worker
