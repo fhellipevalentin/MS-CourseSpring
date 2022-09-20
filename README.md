@@ -5,8 +5,8 @@ Créditos: Nelio Alves - Udemy
 
 # OBJETIVO
 
-Essas sequencias de commits são uma sequencia na qual mostra a desenvoltura de um programa totalmente voltada para a simulação de um
-programa que atua através de micro-serviços. São ao todo: 7 micro-serviços e cada um desempenha a devida função e compõem uma aplicação
+Essas sequencias de commits mostra a desenvoltura de um programa totalmente voltada para a simulação de um programa que atua 
+através de micro-serviços. São ao todo: 7 micro-serviços e cada um desempenha a devida função e compõem uma aplicação
 única, e assim o aprendizado mostra explicitamente a vantagem de manutenção e reutilização dos módulos da aplicação como um todo.
 
 Abaixo: Você pode notar a existência dos micro serviços como módulos através da IDE utilizada, que é o IntelliJ.
