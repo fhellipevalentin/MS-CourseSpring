@@ -41,7 +41,7 @@ rodando em diferentes portas, ao mesmo tempo, conectados localmente.
 # Funcionamento da visualização do servidor Eureka
 
 Abaixo, visualmente é possível identificar as instancias registradas no Servidor Eureka, e assim, contectadas através do Gateway Zull
-e também, as três instancias de worker identificadas.
+e também, as três instancias de worker identificadas.. Assim, nos facilita a questão do balanceamento de carga.
 
 ![image](https://user-images.githubusercontent.com/65087845/191251334-822aa10c-78c1-4dac-8015-b52c6fd2eaf6.png)
 
